@@ -29,8 +29,8 @@ public class CafeSystem
         Menu new_Dessert = new Menu(product_name,price);
         CafeSystem.addToDessert(new_Dessert);
     }
-    static Integer new_Price(int price) {
-        Integer new_Price = new Integer(price);
+    static int new_Price(int price) {
+        int new_Price = price;
         CafeSystem.addToPrice(new_Price);
         return new_Price;
     }

@@ -1,3 +1,5 @@
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -6,7 +8,7 @@ import java.awt.event.ActionListener;
 public class CafeKiosk {
     static class ImagePanel extends JPanel {
         private final Image img;
-        private final Image manual_img = new ImageIcon("src/img/CafeManual.png").getImage();
+        private final Image manual_img = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/CafeManual.png").getImage();
 
         public ImagePanel(Image img) {
             this.img = img;
@@ -20,9 +22,8 @@ public class CafeKiosk {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("WELCOME TO BUFS CAFE");
-        ImagePanel pn = new ImagePanel(new ImageIcon("src/img/cafeview.jpg").getImage());
+        ImagePanel pn = new ImagePanel(new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/cafeview.jpg").getImage());
         frame.pack();
-//        frame.setResizable(true);
         frame.add(pn);
         JPanel Hotpn = new JPanel();
         JPanel Icepn = new JPanel();
@@ -130,7 +131,7 @@ public class CafeKiosk {
             private void doHot() {
                 JButton HotButton_Americano = new JButton("");
                 frame.add(Hotpn);
-                HotButton_Americano.setIcon(new ImageIcon("src/img/Hot/HotAmericano.jpg"));
+                HotButton_Americano.setIcon(new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Hot/HotAmericano.jpg"));
                 Hotpn.add(HotButton_Americano);
                 HotButton_Americano.setBounds(20, 20, 260,195);
                 JTextField hot_Americano = new JTextField("(HOT)아메리카노  4000원");
@@ -152,7 +153,7 @@ public class CafeKiosk {
                     }});
 
                 JButton HotButton_Cappuccino = new JButton("");
-                HotButton_Cappuccino.setIcon(new ImageIcon("src/img/Hot/HotCappuccino.jpg"));
+                HotButton_Cappuccino.setIcon(new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Hot/HotCappuccino.jpg"));
                 Hotpn.add(HotButton_Cappuccino);
                 HotButton_Cappuccino.setBounds(280, 20, 260, 195);
                 JTextField Cappuccino = new JTextField("(Hot)카푸치노  4900원");
@@ -174,7 +175,7 @@ public class CafeKiosk {
                     }});
 
                 JButton HotButton_Espresso = new JButton("");
-                HotButton_Espresso.setIcon(new ImageIcon("src/img/Hot/Espresso.jpg"));
+                HotButton_Espresso.setIcon(new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Hot/Espresso.jpg"));
                 Hotpn.add(HotButton_Espresso);
                 HotButton_Espresso.setBounds(540, 20, 260, 195);
                 JTextField Espresso = new JTextField("(Hot)에스프레소  4500원");
@@ -196,7 +197,7 @@ public class CafeKiosk {
                     }});
 
                 JButton HotButton_HotChoco = new JButton("");
-                HotButton_HotChoco.setIcon(new ImageIcon("src/img/Hot/HotChoco.jpg"));
+                HotButton_HotChoco.setIcon(new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Hot/HotChoco.jpg"));
                 Hotpn.add(HotButton_HotChoco);
                 HotButton_HotChoco.setBounds(800, 20, 260, 195);
                 JTextField HotChoco = new JTextField("(Hot)핫초코  4200원");
@@ -218,7 +219,7 @@ public class CafeKiosk {
                     }});
 
                 JButton HotButton_EarlgreyTea = new JButton("");
-                HotButton_EarlgreyTea.setIcon(new ImageIcon("src/img/Hot/EarlgreyTea.jpg"));
+                HotButton_EarlgreyTea.setIcon(new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Hot/EarlgreyTea.jpg"));
                 Hotpn.add(HotButton_EarlgreyTea);
                 HotButton_EarlgreyTea.setBounds(1060, 20, 260, 195);
                 JTextField EarlgreyTea = new JTextField("(Hot)얼그레이티  4400원");
@@ -240,7 +241,7 @@ public class CafeKiosk {
                     }});
 
                 JButton HotButton_RooibosTea = new JButton("");
-                HotButton_RooibosTea.setIcon(new ImageIcon("src/img/Hot/RooibosTea.jpg"));
+                HotButton_RooibosTea.setIcon(new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Hot/RooibosTea.jpg"));
                 Hotpn.add(HotButton_RooibosTea);
                 HotButton_RooibosTea.setBounds(1320, 20, 260, 195);
                 JTextField RooibosTea = new JTextField("(Hot)루이보스티  4400원");
@@ -286,7 +287,7 @@ public class CafeKiosk {
             private void doICE() {
                 frame.add(Icepn);
                 JButton IceButton_Americano = new JButton("");
-                IceButton_Americano.setIcon(new ImageIcon("src/img/Ice/IceAmericano.jpg"));
+                IceButton_Americano.setIcon(new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ice/IceAmericano.jpg"));
                 Icepn.add(IceButton_Americano);
                 IceButton_Americano.setBounds(20, 20, 260, 195);
                 JTextField Ice_Amricano = new JTextField("(ICE)아메리카노  4500원");
@@ -307,7 +308,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_CafeLatte = new ImageIcon("src/img/Ice/IceCafeLatte.jpg");
+                ImageIcon icon_CafeLatte = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ice/IceCafeLatte.jpg");
                 JButton IceButton_CafeLatte = new JButton(CafeSystem.resizeIcon(icon_CafeLatte, 259, 194));
                 Icepn.add(IceButton_CafeLatte);
                 IceButton_CafeLatte.setBounds(280, 20, 260,195);
@@ -329,7 +330,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_DolceLatte = new ImageIcon("src/img/Ice/DolceLatte.jpg");
+                ImageIcon icon_DolceLatte = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ice/DolceLatte.jpg");
                 JButton IceButton_DolceLatte = new JButton(CafeSystem.resizeIcon(icon_DolceLatte, 259, 194));
                 Icepn.add(IceButton_DolceLatte);
                 IceButton_DolceLatte.setBounds(540, 20, 260,195);
@@ -351,7 +352,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_CaramelMacchiato = new ImageIcon("src/img/Ice/CaramelMacchiato.jpg");
+                ImageIcon icon_CaramelMacchiato = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ice/CaramelMacchiato.jpg");
                 JButton IceButton_CaramelMacchiato = new JButton(CafeSystem.resizeIcon(icon_CaramelMacchiato, 259, 194));
                 Icepn.add(IceButton_CaramelMacchiato);
                 IceButton_CaramelMacchiato.setBounds(800, 20, 260,195);
@@ -373,7 +374,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_ColdBrew = new ImageIcon("src/img/Ice/ColdBrew.jpg");
+                ImageIcon icon_ColdBrew = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ice/ColdBrew.jpg");
                 JButton IceButton_ColdBrew = new JButton(CafeSystem.resizeIcon(icon_ColdBrew, 259, 194));
                 Icepn.add(IceButton_ColdBrew);
                 IceButton_ColdBrew.setBounds(1060, 20, 260,195);
@@ -395,7 +396,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_IceTea = new ImageIcon("src/img/Ice/IceTea.jpg");
+                ImageIcon icon_IceTea = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ice/IceTea.jpg");
                 JButton IceButton_IceTea = new JButton(CafeSystem.resizeIcon(icon_IceTea, 259, 194));
                 Icepn.add(IceButton_IceTea);
                 IceButton_IceTea.setBounds(1320, 20, 260,195);
@@ -442,7 +443,7 @@ public class CafeKiosk {
 
             private void doAde() {
                 frame.add(Adepn);
-                JButton AdeButton_Lemonade = new JButton(new ImageIcon("src/img/Ade/Lemonade.jpg"));
+                JButton AdeButton_Lemonade = new JButton(new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ade/Lemonade.jpg"));
                 Adepn.add(AdeButton_Lemonade);
                 AdeButton_Lemonade.setBounds(20, 20, 260,195);
                 JTextField Lemonade = new JTextField("레몬에이드  4800원");
@@ -464,7 +465,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_Grapefruitade = new ImageIcon("src/img/Ade/Grapefruitade.JPG");
+                ImageIcon icon_Grapefruitade = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ade/Grapefruitade.jpg");
                 JButton AdeButton_Grapefruitade = new JButton(CafeSystem.resizeIcon(icon_Grapefruitade, 260, 195));
                 Adepn.add(AdeButton_Grapefruitade);
                 AdeButton_Grapefruitade.setBounds(280, 20, 260,195);
@@ -486,7 +487,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_BlueLemonade = new ImageIcon("src/img/Ade/BlueLemonade.jpg");
+                ImageIcon icon_BlueLemonade = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ade/BlueLemonade.jpg");
                 JButton AdeButton_BlueLemonade = new JButton(CafeSystem.resizeIcon(icon_BlueLemonade, 260, 195));
                 Adepn.add(AdeButton_BlueLemonade);
                 AdeButton_BlueLemonade.setBounds(540, 20, 260,195);
@@ -508,7 +509,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_Greenade = new ImageIcon("src/img/Ade/Greenade.jpg");
+                ImageIcon icon_Greenade = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ade/Greenade.jpg");
                 JButton AdeButton_Greenade = new JButton(CafeSystem.resizeIcon(icon_Greenade, 260, 195));
                 Adepn.add(AdeButton_Greenade);
                 AdeButton_Greenade.setBounds(800, 20, 260,195);
@@ -530,7 +531,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_Megaade = new ImageIcon("src/img/Ade/Megaade.jpg");
+                ImageIcon icon_Megaade = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ade/Megaade.jpg");
                 JButton AdeButton_Megaade = new JButton(CafeSystem.resizeIcon(icon_Megaade, 260, 195));
                 Adepn.add(AdeButton_Megaade);
                 AdeButton_Megaade.setBounds(1060, 20, 260,195);
@@ -552,7 +553,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_Pinkade = new ImageIcon("src/img/Ade/Pinkade.jpg");
+                ImageIcon icon_Pinkade = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Ade/Pinkade.jpg");
                 JButton AdeButton_Pinkade = new JButton(CafeSystem.resizeIcon(icon_Pinkade, 260, 195));
                 Adepn.add(AdeButton_Pinkade);
                 AdeButton_Pinkade.setBounds(1320, 20, 260,195);
@@ -597,7 +598,7 @@ public class CafeKiosk {
             }
             private void doDessert() {
                 frame.add(Dessertpn);
-                JButton DstButton_ChocolateCake = new JButton(new ImageIcon("src/img/Dessert/ChocolateCake.jpg"));
+                JButton DstButton_ChocolateCake = new JButton(new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Dessert/ChocolateCake.jpg"));
                 Dessertpn.add(DstButton_ChocolateCake);
                 DstButton_ChocolateCake.setBounds(20, 20, 260,195);
                 JTextField ChocolateCake = new JTextField("초코케이크 (1조각) 5300원");
@@ -619,7 +620,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_StrawberryCake = new ImageIcon("src/img/Dessert/StrawberryCake.jpg");
+                ImageIcon icon_StrawberryCake = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Dessert/StrawberryCake.jpg");
                 JButton DstButton_StrawberryCake = new JButton(CafeSystem.resizeIcon(icon_StrawberryCake, 260, 195));
                 Dessertpn.add(DstButton_StrawberryCake);
                 DstButton_StrawberryCake.setBounds(280, 20, 260,195);
@@ -642,7 +643,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_Tiramisu = new ImageIcon("src/img/Dessert/Tiramisu.jpg");
+                ImageIcon icon_Tiramisu = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Dessert/Tiramisu.jpg");
                 JButton DstButton_Tiramisu = new JButton(CafeSystem.resizeIcon(icon_Tiramisu, 260, 195));
                 Dessertpn.add(DstButton_Tiramisu);
                 DstButton_Tiramisu.setBounds(540, 20, 260,195);
@@ -665,7 +666,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_Sandwich = new ImageIcon("src/img/Dessert/Sandwich.jpg");
+                ImageIcon icon_Sandwich = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Dessert/Sandwich.jpg");
                 JButton DstButton_Sandwich = new JButton(CafeSystem.resizeIcon(icon_Sandwich, 260, 195));
                 Dessertpn.add(DstButton_Sandwich);
                 DstButton_Sandwich.setBounds(800, 20, 260,195);
@@ -688,7 +689,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_Bagel = new ImageIcon("src/img/Dessert/Bagel.jpg");
+                ImageIcon icon_Bagel = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Dessert/Bagel.jpg");
                 JButton DstButton_Bagel = new JButton(CafeSystem.resizeIcon(icon_Bagel, 260, 195));
                 Dessertpn.add(DstButton_Bagel);
                 DstButton_Bagel.setBounds(1060, 20, 260,195);
@@ -711,7 +712,7 @@ public class CafeKiosk {
                         }
                     }
                 });
-                ImageIcon icon_Salad = new ImageIcon("src/img/Dessert/Salad.jpg");
+                ImageIcon icon_Salad = new ImageIcon("/Users/zoohwan_99/Documents/인텔리제이 자료/CafeKiosk/img/Dessert/Salad.jpg");
                 JButton DstButton_Salad = new JButton(CafeSystem.resizeIcon(icon_Salad, 260, 195));
                 Dessertpn.add(DstButton_Salad);
                 DstButton_Salad.setBounds(1320, 20, 260,195);
@@ -816,10 +817,31 @@ public class CafeKiosk {
         });
         ordertxt.setVisible(false);
         order_bt.setVisible(false);
-        frame.setLocation(0,0);
         frame.setContentPane(pn);
+        frame.setLocation(0,0);
         frame.setSize(1900, 1100);
         frame.setVisible(true);
+
+        // JFrame 크기 변경 시 JPanel 크기를 조정하는 ComponentListener 추가
+        frame.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                Dimension newSize = frame.getSize();
+                pn.setSize(newSize);
+                pn.revalidate(); // 패널을 다시 그리도록 요청
+
+                listtxt.setSize(newSize);
+                listtxt.revalidate();
+            }
+        });
+
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        // JFrame의 크기를 화면 크기로 설정
+        frame.setSize(screenSize.width, screenSize.height);
+        // JFrame을 화면의 중앙에 배치
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+
         frame.setResizable(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
